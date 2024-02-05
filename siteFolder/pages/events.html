@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Events ~ Julia's Vintage Clothing</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--Website Favicon-->
+        <link rel="shortcut icon" href="../images/logoFavicon.ico"
+            type="image/x-icon">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body>
+        <!--MAIN-->
+        <main>
+            <h1>Julia's Vintage Clothing</h1>
+            <h2>Our Events</h2>
+
+            <!--Shares same navigation code/css as the navigation on the index page-->
+            <section aria-label="event listing">
+                <div>
+                    <h3 id="workshops">Workshops</h3>
+                    <p>Dive into the groove with our Workshops, where you can
+                        unleash
+                        your creative side. </p>
+
+                </div>
+                <div>
+                    <h3 id="appointment-form">Appointments</h3>
+                    <p>Sign up for personalized tailoring and measuring sessions
+                        to ensure your vintage find fits like a glove, or enlist
+                        yourself in our flower-fuelled one-on-one workshops
+                        here! </p>
+
+                </div>
+                <div>
+                    <h3 id="events">Charity Drives</h3>
+                    <p>Join our Charity Drives, where fashion meets
+                        philanthropy. Sign up to attend these groovy events or
+                        volunteer to help us make a difference.</p>
+
+                </div>
+            </section>
+
+            <!--Calendar, which was originally a table but didn't responsively scale well on mobile-->
+            <!--In Revisited, this will be turned into a table (with JS hopefully)-->
+            <!--Each span tag is a different colour to show different events happening, with the labels beign the legend underneath-->
+
+            <section id="calendar">
+
+                <div class="month">
+                    <h3>February</h3>
+                    <p>2024</p>
+                </div>
+
+                <div class="days">
+
+                    <ul class="nameOfDay">
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                        <li>Sun</li>
+                    </ul>
+
+                    <ul class="numOfDay">
+                        <li><span class="workshop">1</span></li>
+                        <li><span class="workshop">2</span></li>
+                        <li><span class="workshop">3</span></li>
+                        <li>4</li>
+                        <li><span class="drive">5</span></li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li><span class="workshop">10</span></li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li><span class="appointment">21</span></li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li><span class="drive">26</span></li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                    </ul>
+
+                </div>
+
+                <div class="label" id="appointment">
+                    <img src="../images/logoFavicon.svg"
+                        alt="The company's flower logo" width="96" height="96">
+                    Appointment
+                </div>
+                <div class="label" id="workshop">
+                    <img src="../images/logoFavicon.svg"
+                        alt="The company's flower logo" width="96" height="96">
+                    Workshop
+                </div>
+                <div class="label" id="charity">
+                    <img src="../images/logoFavicon.svg"
+                        alt="The company's flower logo" width="96" height="96">
+                    Charity Event
+                </div>
+            </section>
+
+            <!--A late addition to the website, my first unsupervised go at a form-->
+            <!--Now we've been introduced to forms more officially, I'll be redoing this form in PHP and JS in the Revisited assignment-->
+            <form method="post">
+                <label id="name">Name:</label>
+                <input name="submitted-name" autocomplete="name" required>
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" required>
+                <label for="phone">Mobile:</label>
+
+                <input type="tel" id="phone" name="phone" required>
+
+                <label id="event">Event:</label>
+
+                <label for="inputAppointment"><input type="radio"
+                        id="inputAppointment" name="event_choice"
+                        value="appointment">Appointment</label>
+
+                <label for="inputWorkshop"><input type="radio"
+                        id="inputWorkshop" name="event_choice"
+                        value="Workshop">Workshop</label>
+
+                <label for="inputCharity"><input type="radio" id="inputCharity"
+                        name="event_choice"
+                        value="CharityEvent">Charity Event</label>
+
+                <label for="dateTime">Preferred Date:</label><input type="date"
+                    id="dateTime" name="trip-dateTime" value="2023-02-01"
+                    min="2023-02-02"
+                    max="2023-03-29" required>
+
+                <label for="comments">Additional Comments:</label><textarea
+                    id="comments" name="comments" rows="5" cols="5"
+                    placeholder="Comments go here..."></textarea>
+
+                <input type="submit" value="Sign Up">
+            </form>
+
+        </main>
+        <footer>
+            <nav aria-label="secondary">
+                <h5>Site Map</h5>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/events.html">Events</a></li>
+                    <li><a href="../pages/partners.html">Partners</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+
+</html>

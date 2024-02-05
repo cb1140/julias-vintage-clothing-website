@@ -1,0 +1,959 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+   Eric Meyer Reset
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+{
+	display: block;
+}
+
+body
+{
+	line-height: 1;
+}
+
+ol,
+ul
+{
+	list-style: none;
+}
+
+blockquote,
+q
+{
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+	content: "";
+	content: none;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------
+
+Start of my CSS Rules
+
+ Heading Fonts: Kitschy Retro, Ravie, Bauhaus 93, Arial
+ Main Font: Helvetica, Arial
+
+ Font Colours: Main and Headers (#643212), List Items in Calendar and Form (#00000080), Link Items (#eee)
+ HTML Colours: Main Body (#FDC1AB), Navigation Orange (#ee8449), Navigation Coral (#da7660), Label Umber (#531D1D)
+
+ Border Radius Increments: 5px/10px
+ Logo Images: 3 versions
+ Background Image: 1 version
+ Label Images: 1 version
+ Favicon: 1 version
+
+ W3 Checks: All Passed
+ Comments: Written
+ Images Compressed: Yes
+
+
+   ---------------*/
+
+/* ---------------
+
+
+     Imported Fonts
+
+
+   --------------- */
+
+@font-face
+{
+	font-family: "Kitschy Retro";
+	src: url(./fonts/kitschy-retro-font/KitschyRetroRegular-9YnqB.ttf);
+}
+
+/* ---------------
+
+
+     Main / Body
+     (General reused CSS)
+
+   --------------- */
+
+*
+{
+	box-sizing: border-box;
+	font-family: "Kitschy Retro", Ravie, "Bauhaus 93", Arial, sans-serif;
+}
+
+body
+{
+	background-color: #fdc1ab;
+}
+
+main
+{
+	margin: 0.7rem 1rem;
+	color: #643212;
+	background-color: #fdc1ab;
+	display: grid;
+	align-items: center;
+}
+
+div
+{
+	overflow: auto;
+	padding: 0.4rem;
+	margin: 0.3rem;
+	margin-top: 1rem;
+}
+
+/* ---------------
+     Typography
+   --------------- */
+
+h1,
+h2
+{
+	text-align: center;
+	padding: 0.8rem;
+}
+
+h1
+{
+	font-size: 2.5rem;
+	font-weight: 600;
+	padding: 2rem;
+	/*First logo version is for mobile-only*/
+	background-image: url("./images/titleHeadingBackground3.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+h2
+{
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+h3
+{
+	font-size: 1.8rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+/* Just in case I need a bold feature later in development*/
+b
+{
+	font-weight: 700;
+}
+
+p,
+.numOfDay li,
+input,
+td
+{
+	font-size: 1.15rem;
+	line-height: 1.75rem;
+	padding: 0.6rem;
+	font-weight: 600;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+tr,
+.numOfDay
+{
+	color: #eee;
+}
+
+p + p
+{
+	padding-top: 1em;
+}
+
+h3 + p
+{
+	text-align: left;
+	padding: 0;
+}
+
+
+
+/* Helps with padding before the end of the main content*/
+section:last-of-type
+{
+	padding-bottom: 1rem;
+}
+
+p:last-of-type
+{
+	margin-bottom: 1rem;
+}
+
+/* ---------------
+
+
+     Index CSS
+
+
+   --------------- */
+
+.welcome-motto
+{
+	text-align: center;
+	font-weight: 600;
+}
+
+/* ---------------
+
+
+     Image CSS 
+  
+	
+	 --------------- */
+img
+{
+	width: 49%;
+	height: auto;
+	margin-top: 1rem;
+	border-radius: 10px;
+}
+
+div picture img
+{
+	width: 150px;
+	height: auto;
+	float: right;
+	padding: 0.3rem;
+}
+
+.googleScreenshot{
+	width: 100%;
+	height: auto;
+margin-bottom: 2rem;
+	border-radius: 10px;
+}
+
+
+/* ---------------
+
+
+    General Navigation CSS
+   
+	
+	--------------- */
+[aria-label="secondary partner"],
+[aria-label="secondary service"],
+[aria-label="main"],
+[aria-label="event listing"] 
+{
+	justify-self: center;
+	min-width: 70%;
+	max-width: 800px;
+	flex-wrap: wrap;
+	/* Helps adjust content automatically to reduce overflow */
+	justify-content: center;
+}
+
+/* ---------------
+   Secondary Navigation CSS
+   --------------- */
+[aria-label="secondary partner"] ul li a,
+[aria-label="secondary service"] ul li a
+{
+	text-decoration: none;
+	background-color: #da766080;
+	display: flex;
+	color: #643212;
+	padding: 16px 32px;
+	text-align: center;
+	font-size: 1.2rem;
+	transition: 0.3s;
+	margin-top: 1rem;
+	border-radius: 10px;
+	/*Width minimum needs to be 100% so that elements either side of it
+	doesn't affect the sizing by accident*/
+	min-width: 100%;
+}
+/*Originally I had the links on 0.6 opacity and then switched to 1, but
+that was before I chose brown over white for my text colour
+
+So now instead of opacity tuning, I just changed the background colour*/
+[aria-label="secondary partner"] ul li a:hover,
+[aria-label="secondary service"] ul li a:hover
+{
+		background-color: #da7660;
+}
+
+
+/* ---------------
+     Main Navigation
+   --------------- */
+
+[aria-label="main"] li,
+[aria-label="event listing"] div
+{
+	font-size: 1.3rem;
+	padding: 2rem;
+	text-decoration: none;
+	text-decoration-color: #eee;
+	color: #643212;
+	background-color: #da7660;
+	border-radius: 10px;
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+[aria-label="main"] ul li a
+{
+	text-decoration: none;
+	padding: 1rem;
+}
+
+/*Differentiating colours for link menu */
+[aria-label="main"] li:nth-child(odd),
+[aria-label="event listing"] div:nth-child(odd)
+{
+	background-color: #ee8449;
+	text-align: center;
+}
+
+[aria-label="main"] a:hover
+{
+	text-decoration: underline;
+	color: #ffffff9a;
+}
+
+/*Colour is default purple unless stated that the color needs to be inherited
+AKA you need to remind it to be white*/
+[aria-label="main"] a:visited
+{
+	color: inherit;
+}
+
+/* ---------------
+     Event Page CSS
+   --------------- */
+
+[aria-label="event listing"] div
+{
+	display: block;
+}
+
+[aria-label="event listing"] div h3
+{
+	font-size: 1.5em;
+}
+
+[aria-label="event listing"] div p
+{
+	font-size: 0.8em;
+	padding-top: 0.5rem;
+}
+
+/* --------------
+    Calendar CSS
+   --------------*/
+table
+{
+	margin: 1rem auto;
+}
+
+td
+{
+	padding: 0.3rem;
+	color:#643212;
+}
+
+
+.calendar div
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.calendar div:first-of-type
+{
+	margin-top: 0.8rem;
+}
+
+.days
+{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.days,
+.month
+{
+	padding: 0;
+	margin: 0 0.3rem;
+}
+
+.month
+{
+	padding: 60px;
+	background: #da7660;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-top: 1rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.month p
+{
+	text-align: center;
+}
+
+.nameOfDay
+{
+	margin: 0;
+	padding: 10px 0;
+	background-color: #ddd;
+}
+
+.nameOfDay li
+{
+	display: inline-block;
+	width: 12.8%;
+	color: #666;
+	text-align: center;
+	padding-left: 0.2rem;
+}
+
+.numOfDay
+{
+	padding: 10px 0;
+	background: #eee;
+	margin: 0;
+}
+
+.numOfDay li
+{
+	list-style-type: none;
+	display: inline-block;
+	width: 12.8%;
+	text-align: center;
+	margin-bottom: 12px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #777;
+}
+
+/*hIGHLIGHTED CALENDAR NODES TO SHOW DAYS THAT HAVE EVENTS GOING ON*/
+.numOfDay li .workshop
+{
+	background: #ee8449;
+	color: #eee;
+	border-radius: 2px;
+	padding: 0.5rem;
+}
+
+.numOfDay li .appointment
+{
+	background: #cc7272;
+	color: #eee;
+	border-radius: 2px;
+	padding: 0.5rem;
+}
+
+.numOfDay li .drive
+{
+	background: #531d1d;
+	color: #eee;
+	border-radius: 2px;
+	padding: 0.5rem;
+}
+
+/*LEGEND UNDERNEATH CALENDAR COLOURS*/
+
+.label
+{
+	display: inline-block;
+	padding: 0 25px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 25px;
+	background-color: black;
+	margin-top: 1rem;
+	overflow: hidden;
+	color: #eee;
+
+}
+
+#appointment
+{
+	background-color: #ee8449;
+
+}
+
+#workshop
+{
+	background-color: #531d1d;
+}
+
+#charity
+{
+	background-color: #cc7272;
+}
+
+.label img
+{
+	float: left;
+	margin: 0 20px 0 -25px;
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+
+
+/* ---------------
+     Form CSS under Calendar 
+   --------------- */
+form
+{
+	background: #00000030;
+	padding: 1rem 2rem;
+
+	border-radius: 10px;
+
+}
+
+form label
+{
+	display: block;
+	padding: 1rem 0;
+	width: auto;
+}
+
+label input
+{
+	margin: 0 0.3rem;
+}
+
+[type="radio"]
+{
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+input[type="radio"]
+{
+	width: 15%;
+}
+
+[for="dateTime"]
+{
+	padding-top: 0.5rem;
+}
+
+input
+{
+	width: 50%;
+}
+
+
+textarea
+{
+	resize: none;
+
+}
+
+input[type="submit"]
+{
+	padding: 0.3rem;
+}
+
+
+/* ---------------
+
+
+     About Us HTML
+
+
+   --------------- */
+
+h2 + .reviews
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.review
+{
+	display: inline-block;
+	padding: 0 25px;
+	line-height: 50px;
+	border-radius: 25px;
+	background-color: #cc727280;
+	margin-top: 1rem;
+	overflow: hidden;
+	padding-left: 1rem;
+	height: 28rem;
+	width: 100%;
+}
+
+.review h3
+{
+	font-size: 1.6em;
+	line-height: 1.5rem;
+}
+
+.review h4
+{
+	margin-bottom: 0.8rem;
+	border-bottom: solid #531d1d80 2px;
+}
+
+.review p
+{
+	font-size: 1rem;
+}
+
+.review img
+{
+	height: 2rem;
+	width: auto;
+	float: left;
+	padding-right: 0.2rem;
+	margin-top: 0;
+}
+
+blockquote
+{
+	display: inline-block;
+	padding: 0;
+}
+
+blockquote p
+{
+	font-size: 0.8rem;
+	line-height: 1.2rem;
+	padding-top: 1.2rem;
+}
+
+/* ---------------
+     Footer
+   --------------- */
+
+footer
+{
+	background-color: #d9765f;
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-family: "Kitschy Retro";
+	margin-top: 1rem;
+}
+
+footer nav ul li a:hover{
+	color: #eeeeee80;
+}
+
+footer nav ul li{
+	text-align: center;
+	padding-top: 1rem;
+}
+
+[aria-label="secondary"] a
+{
+	text-decoration: none;
+	display: block;
+	margin: 0.6rem;
+	color: #ffffff;
+	display: inline-block;
+}
+
+h5
+{
+	text-align: center;
+	color: #eee;
+	padding-top: 1rem;
+	font-size: 2rem;
+	text-decoration: underline;
+}
+
+/* ---------------
+     Media Queries
+	 Credit to Bootstrap's documentation on Breakpoints for the measurements of devices
+   --------------- */
+
+@media (min-width: 400px)
+{
+	main
+	{
+		padding: 0 1.5rem;
+	}
+
+	section .review
+	{
+		height: 22rem;
+	}
+}
+
+/* ---------------
+     Tablets
+   --------------- */
+@media (min-width: 500px)
+{
+	h1
+	{
+		background-repeat: no-repeat;
+		padding: 2rem;
+		margin-top: 1rem;
+	}
+
+	body
+	{
+		/*Body has become big enough on a screen to warrant a background*/
+		background-color: #fdc1ab;
+		background-image: url("./images/logoBackground.svg");
+		background-repeat: repeat-y;
+
+
+	}
+
+	main
+	{
+		margin: 0 auto;
+		max-width: 80%;
+	}
+
+	section .review
+	{
+		height: 20.5rem;
+		width: 90%;
+	}
+
+	.review img
+	{
+		height: 3rem;
+		width: auto;
+	}
+
+		[aria-label="secondary partner"] ul li a,
+		[aria-label="secondary service"] ul li a
+		{
+
+			font-size: 1.2rem;
+		}
+}
+
+@media (min-width: 680px)
+{
+	h1
+	{
+		background-image: url("./images/titleHeadingBackground2.svg");
+	}
+
+	form
+	{
+		width: 75%;
+		margin: 2rem auto;
+	}
+
+	main
+	{
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	footer nav ul li{
+		display: inline;
+		/*100 / 6 (6 links across a width of 100%) = 16.6*/
+		width: 10%;
+	}
+	footer nav ul{
+		width: 100%;
+		display: flex;
+		
+			justify-content: center;
+			margin-bottom: 2rem;
+			
+		
+	}
+
+	.review{
+		width: 75%;
+	}
+	
+
+	h5{
+		margin-bottom: 1rem;
+	}
+}
+
+/* ---------------
+     Tablets Landscape
+   --------------- */
+@media (min-width: 700px)
+{
+	h2 + section
+	{
+		flex-wrap: nowrap;
+	}
+
+	section .review
+	{
+		height: 16rem;
+	}
+
+	.review img
+	{
+		height: 2.3rem;
+		width: auto;
+	}
+}
+
+/* ---------------
+	     Desktops
+	   --------------- */
+@media (min-width: 992px)
+{
+
+	body
+	{
+
+		background-repeat: repeat;
+		background-position: 50%;
+	}
+
+	main
+	{
+		padding: 0 6rem;
+		max-width: 60%;
+
+	}
+
+	section .review
+	{
+		height: 18rem;
+	}
+}
+
+/* For future development potentially*/
+/* ---------------
+     Larger Desktops
+   --------------- */
+@media (min-width: 1200px)
+{}
+
+/* ---------------
+	     Largest desktops
+	   --------------- */
+@media (min-width: 1400px)
+{}
